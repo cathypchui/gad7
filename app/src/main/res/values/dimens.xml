@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Padding used in various locations- see styles.xml for specific instances  -->
+    <dimen name="standardPadding">5dp</dimen>
+    <!-- margin between write-in answer EditText view and the checkBox containing optional email submission -->
+    <dimen name="writeInBoxMarginBottom">5dp</dimen>
+    <!-- Text size for all GAD-7 responses and personal wellness checklist items  -->
+    <dimen name="largerTextSize">14sp</dimen>
+    <!-- Text size for all GAD-7 responses and personal wellness checklist items  -->
+    <dimen name="smallTextSize">12sp</dimen>
+    <!-- Zero DP to allow use of layout weight  -->
+    <dimen name="zeroDp">0dp</dimen>
+    <!-- Top padding for parent linear layout only  -->
+    <dimen name="topPadding">16dp</dimen>
+    <!-- Margin bottom for scrollView containing GAD-7 questions only  -->
+    <dimen name="gad7ScrollViewMarginBottom">15dp</dimen>
+    <!-- Layout padding for linearLayout containing GAD-7 questions within GAD-7 scrollView only  -->
+    <dimen name="gad7LinearLayoutPadding">7dp</dimen>
+    <!-- Margin bottom for scrollView containing personal wellness checklist only  -->
+    <dimen name="personalWellnessScrollViewPadding">7dp</dimen>
+    <!-- Adds additional white space between last checklist item in personal wellness checklist and end of linearLayout within scrollView  -->
+    <dimen name="personalWellnessScrollViewMarginBottom">15dp</dimen>
+    <!-- Modifies margin between SUBMIT and RESET buttons  -->
+    <dimen name="bottomButtonMargin">100dp</dimen>
+    <!--
+    START
+    OF
+    LANDSCAPE
+    MODE
+    RESOURCES-->
+    <!-- Modifies right margin between SUBMIT and RESET buttons  -->
+    <dimen name="landscapeGad7LinearLayoutMarginRight">10dp</dimen>
+</resources>

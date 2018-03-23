@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <!-- Color of all GAD-7 and checklist questions and answers -->
+    <color name="colorPrimaryDark">#303F9F</color>
+    <!-- Color of all selected radio buttons and checks-->
+    <color name="colorAccent">#8C9EFF</color>
+    <!-- Color of GAD-7 section and fill in section for self-care method  -->
+    <color name="backgroundLighter">#EDE7F6</color>
+    <!-- Color of personal wellness checklist section -->
+    <color name="backgroundDarker">#D1C4E9</color>
+</resources>
