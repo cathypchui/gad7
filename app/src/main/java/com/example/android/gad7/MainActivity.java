@@ -968,7 +968,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-    This method creates the results summary, including the final score and what it indicates about the anxiety level of the user
+    This method creates the results summary, which includes the final score and what it indicates about the anxiety level of the user
      */
     private void displayResults(int finalScore) {
         String resultsStatement = getString(R.string.finalScoreSemicolonString) + finalScore;
