@@ -1003,8 +1003,11 @@ public class MainActivity extends AppCompatActivity {
      */
     private void difficultyQuestionDisappears() {
         if (question8.getVisibility() == View.VISIBLE && answerGroup8.getVisibility() == View.VISIBLE) {
-            question8.setVisibility(View.GONE);
-            answerGroup8.setVisibility(View.GONE);
+            if (notAtAll1.isChecked() && notAtAll2.isChecked() && notAtAll3.isChecked() && notAtAll4.isChecked() && notAtAll5.isChecked()
+                    && notAtAll6.isChecked() && notAtAll7.isChecked()) {
+                question8.setVisibility(View.GONE);
+                answerGroup8.setVisibility(View.GONE);
+            }
         }
     }
 
