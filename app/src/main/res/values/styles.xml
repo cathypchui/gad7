@@ -1,10 +1,10 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/backgroundDarker</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <!-- Style for overall parent view  -->
@@ -13,13 +13,14 @@
     </style>
     <!-- Style for GAD-7 title -->
     <style name="gad7Title" parent="AppTheme">
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:background">@color/backgroundLighter</item>
         <item name="android:padding">@dimen/standardPadding</item>
     </style>
     <!-- Style for GAD-7 scrollView -->
     <style name="gad7ScrollView" parent="AppTheme">
         <item name="android:layout_marginBottom">@dimen/gad7ScrollViewMarginBottom</item>
+        <item name="android:background">@color/backgroundLighter</item>
     </style>
     <!-- Style for GAD-7 linear layout within GAD-7 scrollView -->
     <style name="gad7LinearLayout" parent="AppTheme">
@@ -28,7 +29,7 @@
     </style>
     <!-- Style for GAD-7 time frame statement (over past 2 weeks) -->
     <style name="gad7TimeFrame" parent="AppTheme">
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:background">@color/backgroundLighter</item>
         <item name="android:textSize">@dimen/smallTextSize</item>
         <item name="android:paddingTop">@dimen/standardPadding</item>
@@ -37,18 +38,18 @@
     </style>
     <!--Style for GAD-7 questions -->
     <style name="gad7Questions" parent="@android:style/TextAppearance">
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">@dimen/largerTextSize</item>
     </style>
     <!--Style for GAD-7 responses (radioButtons) and personal wellness checklist items -->
     <style name="allAnswers" parent="@android:style/TextAppearance">
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">@dimen/smallTextSize</item>
     </style>
     <!-- Style for personal wellness checklist title -->
     <style name="personalWellnessTitle" parent="AppTheme">
-        <item name="android:textColor">@color/colorPrimaryDark</item>
-        <item name="android:background">@color/backgroundDarker</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@color/colorPrimary</item>
         <item name="android:padding">@dimen/standardPadding</item>
     </style>
     <!-- Style for personal wellness checklist scrollView -->
@@ -58,25 +59,26 @@
         <item name="android:paddingRight">@dimen/personalWellnessScrollViewPadding</item>
         <item name="android:layout_marginBottom">@dimen/personalWellnessScrollViewMarginBottom
         </item>
-        <item name="android:background">@color/backgroundDarker</item>
+        <item name="android:background">@color/colorPrimary</item>
     </style>
     <!-- Style for self-care write-in question editText-->
     <style name="writeIn" parent="AppTheme">
-        <item name="android:background">@color/backgroundLighter</item>
+        <item name="android:background">@color/backgroundDarker</item>
         <item name="android:textSize">@dimen/smallTextSize</item>
         <item name="android:padding">@dimen/standardPadding</item>
         <item name="android:layout_marginBottom">@dimen/writeInBoxMarginBottom</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@android:color/black</item>
     </style>
     <!-- Style for RESET button-->
     <style name="resetButton" parent="@android:style/Widget.Holo.Light.Button.Borderless.Small">
         <!-- Set margin between SUBMIT and RESET button here-->
         <item name="android:layout_marginLeft">@dimen/bottomButtonMargin</item>
-        <item name="android:background">@color/colorAccent</item>
+        <item name="android:background">@color/backgroundDarker</item>
     </style>
     <!-- Style for SUBMIT button-->
     <style name="submitButton" parent="@android:style/Widget.Holo.Light.Button.Borderless.Small">
-        <item name="android:background">@color/colorAccent</item>
+        <item name="android:background">@color/backgroundDarker</item>
     </style>
     <!--
     START
@@ -89,10 +91,16 @@
         <item name="android:layout_marginRight">@dimen/landscapeGad7LinearLayoutMarginRight</item>
     </style>
 
-    <style name="writeInLandscape" parent="AppTheme">
+    <style name="landscapeTitle" parent="AppTheme">
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:background">@color/backgroundLighter</item>
+    </style>
+    <!-- Style for landscape orientation self-care write-in question editText-->
+    <style name="writeInLandscape" parent="AppTheme">
+        <item name="android:background">@color/backgroundDarker</item>
         <item name="android:textSize">@dimen/smallTextSize</item>
         <item name="android:padding">@dimen/standardPadding</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@android:color/black</item>
     </style>
 </resources>
