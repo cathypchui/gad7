@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/zeroDp"
         android:layout_weight="5"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:id="@+id/gad7LinearLayoutLandscape"
@@ -24,10 +25,9 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#EDE7F6"
                 android:padding="5dp"
                 android:text="@string/titleString"
-                android:textColor="@color/colorPrimary" />
+                style="@style/landscapeTitle" />
 
             <TextView
                 android:id="@+id/over_last_two_weeks"
@@ -66,28 +66,32 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/notAtAllString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Disappears" />
 
                         <RadioButton
                             android:id="@+id/several_days1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/severalDaysString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/more_than_half1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/moreThanHalfString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/nearly_every_day1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/nearlyEveryDayString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
                     </RadioGroup>
 
                     <TextView
@@ -108,28 +112,32 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/notAtAllString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Disappears" />
 
                         <RadioButton
                             android:id="@+id/several_days2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/severalDaysString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/more_than_half2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/moreThanHalfString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/nearly_every_day2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/nearlyEveryDayString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
                     </RadioGroup>
 
                     <TextView
@@ -150,28 +158,32 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/notAtAllString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Disappears" />
 
                         <RadioButton
                             android:id="@+id/several_days3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/severalDaysString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/more_than_half3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/moreThanHalfString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/nearly_every_day3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/nearlyEveryDayString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
                     </RadioGroup>
 
                     <TextView
@@ -192,28 +204,32 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/notAtAllString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Disappears" />
 
                         <RadioButton
                             android:id="@+id/several_days4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/severalDaysString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/more_than_half4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/moreThanHalfString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/nearly_every_day4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/nearlyEveryDayString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
                     </RadioGroup>
 
                     <TextView
@@ -234,28 +250,32 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/notAtAllString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Disappears" />
 
                         <RadioButton
                             android:id="@+id/several_days5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/severalDaysString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/more_than_half5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/moreThanHalfString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/nearly_every_day5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/nearlyEveryDayString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
                     </RadioGroup>
 
                     <TextView
@@ -276,7 +296,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/notAtAllString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Disappears" />
 
                         <RadioButton
                             android:id="@+id/several_days6"
@@ -318,28 +339,32 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/notAtAllString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Disappears" />
 
                         <RadioButton
                             android:id="@+id/several_days7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/severalDaysString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/more_than_half7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/moreThanHalfString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
 
                         <RadioButton
                             android:id="@+id/nearly_every_day7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/nearlyEveryDayString"
-                            style="@style/allAnswers" />
+                            style="@style/allAnswers"
+                            android:onClick="question8Appears" />
                     </RadioGroup>
 
                     <TextView
@@ -501,6 +526,7 @@
 
             <EditText
                 android:id="@+id/write_in"
+                android:inputType="textShortMessage"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/zeroDp"
                 android:layout_weight="1"

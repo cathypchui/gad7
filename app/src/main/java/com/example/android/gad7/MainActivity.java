@@ -10,65 +10,73 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    ScrollView gad7ScrollView;
-    ScrollView personalWellnessScrollView;
-    RadioGroup answerGroup1;
-    RadioGroup answerGroup2;
-    RadioGroup answerGroup3;
-    RadioGroup answerGroup4;
-    RadioGroup answerGroup5;
-    RadioGroup answerGroup6;
-    RadioGroup answerGroup7;
-    RadioGroup answerGroup8;
-    EditText writeIn;
-    CheckBox emailCheck;
-    CheckBox check1;
-    CheckBox check2;
-    CheckBox check3;
-    CheckBox check4;
-    CheckBox check5;
-    CheckBox check6;
-    CheckBox check7;
-    CheckBox check8;
-    CheckBox check9;
-    CheckBox check10;
-    CheckBox check11;
-    RadioButton notAtAll1;
-    RadioButton severalDays1;
-    RadioButton moreThanHalf1;
-    RadioButton nearlyEveryDay1;
-    RadioButton notAtAll2;
-    RadioButton severalDays2;
-    RadioButton moreThanHalf2;
-    RadioButton nearlyEveryDay2;
-    RadioButton notAtAll3;
-    RadioButton severalDays3;
-    RadioButton moreThanHalf3;
-    RadioButton nearlyEveryDay3;
-    RadioButton notAtAll4;
-    RadioButton severalDays4;
-    RadioButton moreThanHalf4;
-    RadioButton nearlyEveryDay4;
-    RadioButton notAtAll5;
-    RadioButton severalDays5;
-    RadioButton moreThanHalf5;
-    RadioButton nearlyEveryDay5;
-    RadioButton notAtAll6;
-    RadioButton severalDays6;
-    RadioButton moreThanHalf6;
-    RadioButton nearlyEveryDay6;
-    RadioButton notAtAll7;
-    RadioButton severalDays7;
-    RadioButton moreThanHalf7;
-    RadioButton nearlyEveryDay7;
-    RadioButton notDifficult;
-    RadioButton somewhatDifficult;
-    RadioButton veryDifficult;
-    RadioButton extremelyDifficult;
+    private ScrollView gad7ScrollView, personalWellnessScrollView;
+    private TextView question8;
+    private RadioGroup answerGroup1, answerGroup2, answerGroup3, answerGroup4, answerGroup5, answerGroup6, answerGroup7, answerGroup8;
+    private EditText writeIn;
+    private CheckBox emailCheck;
+    private CheckBox check1, check2, check3, check4, check5, check6, check7, check8, check9, check10, check11;
+    private RadioButton notAtAll1, severalDays1, moreThanHalf1, nearlyEveryDay1;
+    private RadioButton notAtAll2, severalDays2, moreThanHalf2, nearlyEveryDay2;
+    private RadioButton notAtAll3, severalDays3, moreThanHalf3, nearlyEveryDay3;
+    private RadioButton notAtAll4, severalDays4, moreThanHalf4, nearlyEveryDay4;
+    private RadioButton notAtAll5, severalDays5, moreThanHalf5, nearlyEveryDay5;
+    private RadioButton notAtAll6, severalDays6, moreThanHalf6, nearlyEveryDay6;
+    private RadioButton notAtAll7, severalDays7, moreThanHalf7, nearlyEveryDay7;
+    private RadioButton notDifficult, somewhatDifficult, veryDifficult, extremelyDifficult;
     int finalScore;
+    //declares all the keys used in saveInstance and getInstance
+    private static final String WRITE_IN = "writeInKey";
+    private static final String QUESTION_8_VISIBILITY = "question8Visibility";
+    private static final String EMAIL_CHECK = "emailCheckKey";
+    private static final String CHECK1 = "check1Key";
+    private static final String CHECK2 = "check2Key";
+    private static final String CHECK3 = "check3Key";
+    private static final String CHECK4 = "check4Key";
+    private static final String CHECK5 = "check5Key";
+    private static final String CHECK6 = "check6Key";
+    private static final String CHECK7 = "check7Key";
+    private static final String CHECK8 = "check8Key";
+    private static final String CHECK9 = "check9Key";
+    private static final String CHECK10 = "check10Key";
+    private static final String CHECK11 = "check11Key";
+    private static final String NOT_AT_ALL_1 = "notAtAll1Key";
+    private static final String NOT_AT_ALL_2 = "notAtAll2Key";
+    private static final String NOT_AT_ALL_3 = "notAtAll3Key";
+    private static final String NOT_AT_ALL_4 = "notAtAll4Key";
+    private static final String NOT_AT_ALL_5 = "notAtAll5Key";
+    private static final String NOT_AT_ALL_6 = "notAtAll6Key";
+    private static final String NOT_AT_ALL_7 = "notAtAll7Key";
+    private static final String SEVERAL_DAYS_1 = "severalDays1Key";
+    private static final String SEVERAL_DAYS_2 = "severalDays2Key";
+    private static final String SEVERAL_DAYS_3 = "severalDays3Key";
+    private static final String SEVERAL_DAYS_4 = "severalDays4Key";
+    private static final String SEVERAL_DAYS_5 = "severalDays5Key";
+    private static final String SEVERAL_DAYS_6 = "severalDays6Key";
+    private static final String SEVERAL_DAYS_7 = "severalDays7Key";
+    private static final String MORE_THAN_HALF_1 = "moreThanHalf1Key";
+    private static final String MORE_THAN_HALF_2 = "moreThanHalf2Key";
+    private static final String MORE_THAN_HALF_3 = "moreThanHalf3Key";
+    private static final String MORE_THAN_HALF_4 = "moreThanHalf4Key";
+    private static final String MORE_THAN_HALF_5 = "moreThanHalf5Key";
+    private static final String MORE_THAN_HALF_6 = "moreThanHalf6Key";
+    private static final String MORE_THAN_HALF_7 = "moreThanHalf7Key";
+    private static final String NEARLY_EVERY_DAY_1 = "nearlyEveryDay1Key";
+    private static final String NEARLY_EVERY_DAY_2 = "nearlyEveryDay2Key";
+    private static final String NEARLY_EVERY_DAY_3 = "nearlyEveryDay3Key";
+    private static final String NEARLY_EVERY_DAY_4 = "nearlyEveryDay4Key";
+    private static final String NEARLY_EVERY_DAY_5 = "nearlyEveryDay5Key";
+    private static final String NEARLY_EVERY_DAY_6 = "nearlyEveryDay6Key";
+    private static final String NEARLY_EVERY_DAY_7 = "nearlyEveryDay7Key";
+    private static final String NOT_DIFFICULT = "notDifficultKey";
+    private static final String SOMEWHAT_DIFFICULT = "somewhatDifficultKey";
+    private static final String VERY_DIFFICULT = "veryDifficultKey";
+    private static final String EXTREMELY_DIFFICULT = "extremelyDifficultKey";
+
 
 
     @Override
@@ -78,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         finalScore = 0;
         gad7ScrollView = findViewById(R.id.gad7_scrollView);
         personalWellnessScrollView = findViewById(R.id.personal_wellness_scrollView);
+        question8 = findViewById(R.id.question_8);
         answerGroup1 = findViewById(R.id.answer_group1);
         answerGroup2 = findViewById(R.id.answer_group2);
         answerGroup3 = findViewById(R.id.answer_group3);
@@ -131,9 +140,10 @@ public class MainActivity extends AppCompatActivity {
         somewhatDifficult = findViewById(R.id.somewhat_difficult);
         veryDifficult = findViewById(R.id.very_difficult);
         extremelyDifficult = findViewById(R.id.extremely_difficult);
+        difficultyQuestionDisappears();
     }
 
-    //this method calculates the final score upon submission of all answers
+    //this method prevents submission if mandatory questions are not answered, and scores the GAD-7 if all mandatory questions are answered
     public void submitAnswers(View view) {
         if (answerGroup1.getCheckedRadioButtonId() == -1) {
             Toast.makeText(getApplicationContext(), getString(R.string.missedQuestion1), Toast.LENGTH_SHORT).show();
@@ -163,7 +173,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), getString(R.string.missedQuestion7), Toast.LENGTH_SHORT).show();
             return;
         }
-        if (answerGroup8.getCheckedRadioButtonId() == -1) {
+        if (answerGroup8.getCheckedRadioButtonId() == -1 && !notAtAll1.isChecked() && !notAtAll2.isChecked()
+                && !notAtAll3.isChecked() && !notAtAll4.isChecked() && !notAtAll5.isChecked() && !notAtAll6.isChecked() && !notAtAll7.isChecked()) {
             Toast.makeText(getApplicationContext(), getString(R.string.missedQuestion8), Toast.LENGTH_SHORT).show();
             return;
         }
@@ -176,16 +187,25 @@ public class MainActivity extends AppCompatActivity {
         }
         finalScore = 0;
     }
+
+    //this method makes question 8 appear if the GAD-7 indicates user is having problems
+    public void question8Appears(View view) {
+        difficultyQuestionAppears();
+    }
+
+    public void question8Disappears(View view) {
+        difficultyQuestionDisappears();
+    }
+
     /*this method resets all radio buttons to unchecked
-    *and resets the finalScore to 0
+     * and resets the finalScore to 0
     * and resets the resultsSummary
     * and resets all checkboxes to unchecked
     * and clears out the write-in answer
+     * and makes difficulty question disappear
     */
 
     public void resetMethod(View view) {
-        gad7ScrollView.fullScroll(ScrollView.FOCUS_UP);
-        personalWellnessScrollView.fullScroll(ScrollView.FOCUS_UP);
         answerGroup1.clearCheck();
         answerGroup2.clearCheck();
         answerGroup3.clearCheck();
@@ -232,6 +252,9 @@ public class MainActivity extends AppCompatActivity {
             check11.setChecked(false);
         }
         finalScore = 0;
+        difficultyQuestionDisappears();
+        gad7ScrollView.fullScroll(ScrollView.FOCUS_UP);
+        personalWellnessScrollView.fullScroll(ScrollView.FOCUS_UP);
     }
 
     /**
@@ -240,226 +263,231 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         String writeInAnswer = writeIn.getText().toString();
-        savedInstanceState.putString("writeInKey", writeInAnswer);
-        if (emailCheck.isChecked()) {
-            savedInstanceState.putBoolean("emailCheckKey", true);
+        savedInstanceState.putString(WRITE_IN, writeInAnswer);
+        if (question8.getVisibility() == View.VISIBLE && answerGroup8.getVisibility() == View.VISIBLE) {
+            savedInstanceState.putBoolean(QUESTION_8_VISIBILITY, true);
         } else {
-            savedInstanceState.putBoolean("emailCheckKey", false);
+            savedInstanceState.putBoolean(QUESTION_8_VISIBILITY, false);
+        }
+        if (emailCheck.isChecked()) {
+            savedInstanceState.putBoolean(EMAIL_CHECK, true);
+        } else {
+            savedInstanceState.putBoolean(EMAIL_CHECK, false);
         }
         if (check1.isChecked()) {
-            savedInstanceState.putBoolean("check1Key", true);
+            savedInstanceState.putBoolean(CHECK1, true);
         } else {
-            savedInstanceState.putBoolean("check1Key", false);
+            savedInstanceState.putBoolean(CHECK1, false);
         }
         if (check2.isChecked()) {
-            savedInstanceState.putBoolean("check2Key", true);
+            savedInstanceState.putBoolean(CHECK2, true);
         } else {
-            savedInstanceState.putBoolean("check2Key", false);
+            savedInstanceState.putBoolean(CHECK2, false);
         }
         if (check3.isChecked()) {
-            savedInstanceState.putBoolean("check3Key", true);
+            savedInstanceState.putBoolean(CHECK3, true);
         } else {
-            savedInstanceState.putBoolean("check3Key", false);
+            savedInstanceState.putBoolean(CHECK3, false);
         }
         if (check4.isChecked()) {
-            savedInstanceState.putBoolean("check4Key", true);
+            savedInstanceState.putBoolean(CHECK4, true);
         } else {
-            savedInstanceState.putBoolean("check4Key", false);
+            savedInstanceState.putBoolean(CHECK4, false);
         }
         if (check5.isChecked()) {
-            savedInstanceState.putBoolean("check5Key", true);
+            savedInstanceState.putBoolean(CHECK5, true);
         } else {
-            savedInstanceState.putBoolean("check5Key", false);
+            savedInstanceState.putBoolean(CHECK5, false);
         }
         if (check6.isChecked()) {
-            savedInstanceState.putBoolean("check6Key", true);
+            savedInstanceState.putBoolean(CHECK6, true);
         } else {
-            savedInstanceState.putBoolean("check6Key", false);
+            savedInstanceState.putBoolean(CHECK6, false);
         }
         if (check7.isChecked()) {
-            savedInstanceState.putBoolean("check7Key", true);
+            savedInstanceState.putBoolean(CHECK7, true);
         } else {
-            savedInstanceState.putBoolean("check7Key", false);
+            savedInstanceState.putBoolean(CHECK7, false);
         }
         if (check8.isChecked()) {
-            savedInstanceState.putBoolean("check8Key", true);
+            savedInstanceState.putBoolean(CHECK8, true);
         } else {
-            savedInstanceState.putBoolean("check8Key", false);
+            savedInstanceState.putBoolean(CHECK8, false);
         }
         if (check9.isChecked()) {
-            savedInstanceState.putBoolean("check9Key", true);
+            savedInstanceState.putBoolean(CHECK9, true);
         } else {
-            savedInstanceState.putBoolean("check9Key", false);
+            savedInstanceState.putBoolean(CHECK9, false);
         }
         if (check10.isChecked()) {
-            savedInstanceState.putBoolean("check10Key", true);
+            savedInstanceState.putBoolean(CHECK10, true);
         } else {
-            savedInstanceState.putBoolean("check10Key", false);
+            savedInstanceState.putBoolean(CHECK10, false);
         }
         if (check11.isChecked()) {
-            savedInstanceState.putBoolean("check11Key", true);
+            savedInstanceState.putBoolean(CHECK11, true);
         } else {
-            savedInstanceState.putBoolean("check11Key", false);
+            savedInstanceState.putBoolean(CHECK11, false);
         }
         if (notAtAll1.isChecked()) {
-            savedInstanceState.putBoolean("notAtAll1Key", true);
+            savedInstanceState.putBoolean(NOT_AT_ALL_1, true);
         } else {
-            savedInstanceState.putBoolean("notAtAll1Key", false);
+            savedInstanceState.putBoolean(NOT_AT_ALL_1, false);
         }
         if (severalDays1.isChecked()) {
-            savedInstanceState.putBoolean("severalDays1Key", true);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_1, true);
         } else {
-            savedInstanceState.putBoolean("severalDays1Key", false);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_1, false);
         }
         if (moreThanHalf1.isChecked()) {
-            savedInstanceState.putBoolean("moreThanHalf1Key", true);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_1, true);
         } else {
-            savedInstanceState.putBoolean("moreThanHalf1Key", false);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_1, false);
         }
         if (nearlyEveryDay1.isChecked()) {
-            savedInstanceState.putBoolean("nearlyEveryDay1Key", true);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_1, true);
         } else {
-            savedInstanceState.putBoolean("nearlyEveryDay1Key", false);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_1, false);
         }
         if (notAtAll2.isChecked()) {
-            savedInstanceState.putBoolean("notAtAll2Key", true);
+            savedInstanceState.putBoolean(NOT_AT_ALL_2, true);
         } else {
-            savedInstanceState.putBoolean("notAtAll2Key", false);
+            savedInstanceState.putBoolean(NOT_AT_ALL_2, false);
         }
         if (severalDays2.isChecked()) {
-            savedInstanceState.putBoolean("severalDays2Key", true);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_2, true);
         } else {
-            savedInstanceState.putBoolean("severalDays2Key", false);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_2, false);
         }
         if (moreThanHalf2.isChecked()) {
-            savedInstanceState.putBoolean("moreThanHalf2Key", true);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_2, true);
         } else {
-            savedInstanceState.putBoolean("moreThanHalf2Key", false);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_2, false);
         }
         if (nearlyEveryDay2.isChecked()) {
-            savedInstanceState.putBoolean("nearlyEveryDay2Key", true);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_2, true);
         } else {
-            savedInstanceState.putBoolean("nearlyEveryDay2Key", false);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_2, false);
         }
         if (notAtAll3.isChecked()) {
-            savedInstanceState.putBoolean("notAtAll3Key", true);
+            savedInstanceState.putBoolean(NOT_AT_ALL_3, true);
         } else {
-            savedInstanceState.putBoolean("notAtAll3Key", false);
+            savedInstanceState.putBoolean(NOT_AT_ALL_3, false);
         }
         if (severalDays3.isChecked()) {
-            savedInstanceState.putBoolean("severalDays3Key", true);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_3, true);
         } else {
-            savedInstanceState.putBoolean("severalDays3Key", false);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_3, false);
         }
         if (moreThanHalf3.isChecked()) {
-            savedInstanceState.putBoolean("moreThanHalf3Key", true);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_3, true);
         } else {
-            savedInstanceState.putBoolean("moreThanHalf3Key", false);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_3, false);
         }
         if (nearlyEveryDay3.isChecked()) {
-            savedInstanceState.putBoolean("nearlyEveryDay3Key", true);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_3, true);
         } else {
-            savedInstanceState.putBoolean("nearlyEveryDay3Key", false);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_3, false);
         }
         if (notAtAll4.isChecked()) {
-            savedInstanceState.putBoolean("notAtAll4Key", true);
+            savedInstanceState.putBoolean(NOT_AT_ALL_4, true);
         } else {
-            savedInstanceState.putBoolean("notAtAll4Key", false);
+            savedInstanceState.putBoolean(NOT_AT_ALL_4, false);
         }
         if (severalDays4.isChecked()) {
-            savedInstanceState.putBoolean("severalDays4Key", true);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_4, true);
         } else {
-            savedInstanceState.putBoolean("severalDays4Key", false);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_4, false);
         }
         if (moreThanHalf4.isChecked()) {
-            savedInstanceState.putBoolean("moreThanHalf4Key", true);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_4, true);
         } else {
-            savedInstanceState.putBoolean("moreThanHalf4Key", false);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_4, false);
         }
         if (nearlyEveryDay4.isChecked()) {
-            savedInstanceState.putBoolean("nearlyEveryDay4Key", true);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_4, true);
         } else {
-            savedInstanceState.putBoolean("nearlyEveryDay4Key", false);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_4, false);
         }
         if (notAtAll5.isChecked()) {
-            savedInstanceState.putBoolean("notAtAll5Key", true);
+            savedInstanceState.putBoolean(NOT_AT_ALL_5, true);
         } else {
-            savedInstanceState.putBoolean("notAtAll5Key", false);
+            savedInstanceState.putBoolean(NOT_AT_ALL_5, false);
         }
         if (severalDays5.isChecked()) {
-            savedInstanceState.putBoolean("severalDays5Key", true);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_5, true);
         } else {
-            savedInstanceState.putBoolean("severalDays5Key", false);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_5, false);
         }
         if (moreThanHalf5.isChecked()) {
-            savedInstanceState.putBoolean("moreThanHalf5Key", true);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_5, true);
         } else {
-            savedInstanceState.putBoolean("moreThanHalf5Key", false);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_5, false);
         }
         if (nearlyEveryDay5.isChecked()) {
-            savedInstanceState.putBoolean("nearlyEveryDay5Key", true);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_5, true);
         } else {
-            savedInstanceState.putBoolean("nearlyEveryDay5Key", false);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_6, false);
         }
         if (notAtAll6.isChecked()) {
-            savedInstanceState.putBoolean("notAtAll6Key", true);
+            savedInstanceState.putBoolean(NOT_AT_ALL_6, true);
         } else {
-            savedInstanceState.putBoolean("notAtAll6Key", false);
+            savedInstanceState.putBoolean(NOT_AT_ALL_6, false);
         }
         if (severalDays6.isChecked()) {
-            savedInstanceState.putBoolean("severalDays6Key", true);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_6, true);
         } else {
-            savedInstanceState.putBoolean("severalDays6Key", false);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_6, false);
         }
         if (moreThanHalf6.isChecked()) {
-            savedInstanceState.putBoolean("moreThanHalf6Key", true);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_6, true);
         } else {
-            savedInstanceState.putBoolean("moreThanHalf6Key", false);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_6, false);
         }
         if (nearlyEveryDay6.isChecked()) {
-            savedInstanceState.putBoolean("nearlyEveryDay6Key", true);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_6, true);
         } else {
-            savedInstanceState.putBoolean("nearlyEveryDay6Key", false);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_6, false);
         }
         if (notAtAll7.isChecked()) {
-            savedInstanceState.putBoolean("notAtAll7Key", true);
+            savedInstanceState.putBoolean(NOT_AT_ALL_7, true);
         } else {
-            savedInstanceState.putBoolean("notAtAll7Key", false);
+            savedInstanceState.putBoolean(NOT_AT_ALL_7, false);
         }
         if (severalDays7.isChecked()) {
-            savedInstanceState.putBoolean("severalDays7Key", true);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_7, true);
         } else {
-            savedInstanceState.putBoolean("severalDays7Key", false);
+            savedInstanceState.putBoolean(SEVERAL_DAYS_7, false);
         }
         if (moreThanHalf7.isChecked()) {
-            savedInstanceState.putBoolean("moreThanHalf7Key", true);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_7, true);
         } else {
-            savedInstanceState.putBoolean("moreThanHalf7Key", false);
+            savedInstanceState.putBoolean(MORE_THAN_HALF_7, false);
         }
         if (nearlyEveryDay7.isChecked()) {
-            savedInstanceState.putBoolean("nearlyEveryDay7Key", true);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_7, true);
         } else {
-            savedInstanceState.putBoolean("nearlyEveryDay7Key", false);
+            savedInstanceState.putBoolean(NEARLY_EVERY_DAY_7, false);
         }
         if (notDifficult.isChecked()) {
-            savedInstanceState.putBoolean("notDifficultKey", true);
+            savedInstanceState.putBoolean(NOT_DIFFICULT, true);
         } else {
-            savedInstanceState.putBoolean("notDifficultKey", false);
+            savedInstanceState.putBoolean(NOT_DIFFICULT, false);
         }
         if (somewhatDifficult.isChecked()) {
-            savedInstanceState.putBoolean("somewhatDifficultKey", true);
+            savedInstanceState.putBoolean(SOMEWHAT_DIFFICULT, true);
         } else {
-            savedInstanceState.putBoolean("somewhatDifficultKey", false);
+            savedInstanceState.putBoolean(SOMEWHAT_DIFFICULT, false);
         }
         if (veryDifficult.isChecked()) {
-            savedInstanceState.putBoolean("veryDifficultKey", true);
+            savedInstanceState.putBoolean(VERY_DIFFICULT, true);
         } else {
-            savedInstanceState.putBoolean("veryDifficultKey", false);
+            savedInstanceState.putBoolean(VERY_DIFFICULT, false);
         }
         if (extremelyDifficult.isChecked()) {
-            savedInstanceState.putBoolean("extremelyDifficultKey", true);
+            savedInstanceState.putBoolean(EXTREMELY_DIFFICULT, true);
         } else {
-            savedInstanceState.putBoolean("extremelyDifficultKey", false);
+            savedInstanceState.putBoolean(EXTREMELY_DIFFICULT, false);
         }
         super.onSaveInstanceState(savedInstanceState);
     }
@@ -469,181 +497,185 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
-        String writeInAnswer = savedInstanceState.getString("writeInKey");
+        String writeInAnswer = savedInstanceState.getString(WRITE_IN);
         writeIn.setText(writeInAnswer);
-        boolean emailCheckBoolean = savedInstanceState.getBoolean("emailCheckKey");
+        boolean question8VisibilityBoolean = savedInstanceState.getBoolean(QUESTION_8_VISIBILITY);
+        if (question8VisibilityBoolean) {
+            difficultyQuestionAppears();
+        }
+        boolean emailCheckBoolean = savedInstanceState.getBoolean(EMAIL_CHECK);
         if (emailCheckBoolean) {
             emailCheck.setChecked(true);
         }
-        boolean check1Boolean = savedInstanceState.getBoolean("check1Key");
+        boolean check1Boolean = savedInstanceState.getBoolean(CHECK1);
         if (check1Boolean) {
             check1.setChecked(true);
         }
-        boolean check2Boolean = savedInstanceState.getBoolean("check2Key");
+        boolean check2Boolean = savedInstanceState.getBoolean(CHECK2);
         if (check2Boolean) {
             check2.setChecked(true);
         }
-        boolean check3Boolean = savedInstanceState.getBoolean("check3Key");
+        boolean check3Boolean = savedInstanceState.getBoolean(CHECK3);
         if (check3Boolean) {
             check3.setChecked(true);
         }
-        boolean check4Boolean = savedInstanceState.getBoolean("check4Key");
+        boolean check4Boolean = savedInstanceState.getBoolean(CHECK4);
         if (check4Boolean) {
             check4.setChecked(true);
         }
-        boolean check5Boolean = savedInstanceState.getBoolean("check5Key");
+        boolean check5Boolean = savedInstanceState.getBoolean(CHECK5);
         if (check5Boolean) {
             check5.setChecked(true);
         }
-        boolean check6Boolean = savedInstanceState.getBoolean("check6Key");
+        boolean check6Boolean = savedInstanceState.getBoolean(CHECK6);
         if (check6Boolean) {
             check6.setChecked(true);
         }
-        boolean check7Boolean = savedInstanceState.getBoolean("check7Key");
+        boolean check7Boolean = savedInstanceState.getBoolean(CHECK7);
         if (check7Boolean) {
             check7.setChecked(true);
         }
-        boolean check8Boolean = savedInstanceState.getBoolean("check8Key");
+        boolean check8Boolean = savedInstanceState.getBoolean(CHECK8);
         if (check8Boolean) {
             check8.setChecked(true);
         }
-        boolean check9Boolean = savedInstanceState.getBoolean("check9Key");
+        boolean check9Boolean = savedInstanceState.getBoolean(CHECK9);
         if (check9Boolean) {
             check9.setChecked(true);
         }
-        boolean check10Boolean = savedInstanceState.getBoolean("check10Key");
+        boolean check10Boolean = savedInstanceState.getBoolean(CHECK10);
         if (check10Boolean) {
             check10.setChecked(true);
         }
-        boolean check11Boolean = savedInstanceState.getBoolean("check11Key");
+        boolean check11Boolean = savedInstanceState.getBoolean(CHECK11);
         if (check11Boolean) {
             check11.setChecked(true);
         }
-        boolean notAtAll1Boolean = savedInstanceState.getBoolean("notAtAll1Key");
+        boolean notAtAll1Boolean = savedInstanceState.getBoolean(NOT_AT_ALL_1);
         if (notAtAll1Boolean) {
             notAtAll1.setChecked(true);
         }
-        boolean severalDays1Boolean = savedInstanceState.getBoolean("severalDays1Key");
+        boolean severalDays1Boolean = savedInstanceState.getBoolean(SEVERAL_DAYS_1);
         if (severalDays1Boolean) {
             severalDays1.setChecked(true);
         }
-        boolean moreThanHalf1Boolean = savedInstanceState.getBoolean("moreThanHalf1Key");
+        boolean moreThanHalf1Boolean = savedInstanceState.getBoolean(MORE_THAN_HALF_1);
         if (moreThanHalf1Boolean) {
             moreThanHalf1.setChecked(true);
         }
-        boolean nearlyEveryDay1Boolean = savedInstanceState.getBoolean("nearlyEveryDay1Key");
+        boolean nearlyEveryDay1Boolean = savedInstanceState.getBoolean(NEARLY_EVERY_DAY_1);
         if (nearlyEveryDay1Boolean) {
             nearlyEveryDay1.setChecked(true);
         }
-        boolean notAtAll2Boolean = savedInstanceState.getBoolean("notAtAll2Key");
+        boolean notAtAll2Boolean = savedInstanceState.getBoolean(NOT_AT_ALL_2);
         if (notAtAll2Boolean) {
             notAtAll2.setChecked(true);
         }
-        boolean severalDays2Boolean = savedInstanceState.getBoolean("severalDays2Key");
+        boolean severalDays2Boolean = savedInstanceState.getBoolean(SEVERAL_DAYS_2);
         if (severalDays2Boolean) {
             severalDays2.setChecked(true);
         }
-        boolean moreThanHalf2Boolean = savedInstanceState.getBoolean("moreThanHalf2Key");
+        boolean moreThanHalf2Boolean = savedInstanceState.getBoolean(MORE_THAN_HALF_2);
         if (moreThanHalf2Boolean) {
             moreThanHalf2.setChecked(true);
         }
-        boolean nearlyEveryDay2Boolean = savedInstanceState.getBoolean("nearlyEveryDay2Key");
+        boolean nearlyEveryDay2Boolean = savedInstanceState.getBoolean(NEARLY_EVERY_DAY_2);
         if (nearlyEveryDay2Boolean) {
             nearlyEveryDay2.setChecked(true);
         }
-        boolean notAtAll3Boolean = savedInstanceState.getBoolean("notAtAll3Key");
+        boolean notAtAll3Boolean = savedInstanceState.getBoolean(NOT_AT_ALL_3);
         if (notAtAll3Boolean) {
             notAtAll3.setChecked(true);
         }
-        boolean severalDays3Boolean = savedInstanceState.getBoolean("severalDays3Key");
+        boolean severalDays3Boolean = savedInstanceState.getBoolean(SEVERAL_DAYS_3);
         if (severalDays3Boolean) {
             severalDays3.setChecked(true);
         }
-        boolean moreThanHalf3Boolean = savedInstanceState.getBoolean("moreThanHalf3Key");
+        boolean moreThanHalf3Boolean = savedInstanceState.getBoolean(MORE_THAN_HALF_3);
         if (moreThanHalf3Boolean) {
             moreThanHalf3.setChecked(true);
         }
-        boolean nearlyEveryDay3Boolean = savedInstanceState.getBoolean("nearlyEveryDay3Key");
+        boolean nearlyEveryDay3Boolean = savedInstanceState.getBoolean(NEARLY_EVERY_DAY_3);
         if (nearlyEveryDay3Boolean) {
             nearlyEveryDay3.setChecked(true);
         }
-        boolean notAtAll4Boolean = savedInstanceState.getBoolean("notAtAll4Key");
+        boolean notAtAll4Boolean = savedInstanceState.getBoolean(NOT_AT_ALL_4);
         if (notAtAll4Boolean) {
             notAtAll4.setChecked(true);
         }
-        boolean severalDays4Boolean = savedInstanceState.getBoolean("severalDays4Key");
+        boolean severalDays4Boolean = savedInstanceState.getBoolean(SEVERAL_DAYS_4);
         if (severalDays4Boolean) {
             severalDays4.setChecked(true);
         }
-        boolean moreThanHalf4Boolean = savedInstanceState.getBoolean("moreThanHalf4Key");
+        boolean moreThanHalf4Boolean = savedInstanceState.getBoolean(MORE_THAN_HALF_4);
         if (moreThanHalf4Boolean) {
             moreThanHalf4.setChecked(true);
         }
-        boolean nearlyEveryDay4Boolean = savedInstanceState.getBoolean("nearlyEveryDay4Key");
+        boolean nearlyEveryDay4Boolean = savedInstanceState.getBoolean(NEARLY_EVERY_DAY_4);
         if (nearlyEveryDay4Boolean) {
             nearlyEveryDay4.setChecked(true);
         }
-        boolean notAtAll5Boolean = savedInstanceState.getBoolean("notAtAll5Key");
+        boolean notAtAll5Boolean = savedInstanceState.getBoolean(NOT_AT_ALL_5);
         if (notAtAll5Boolean) {
             notAtAll5.setChecked(true);
         }
-        boolean severalDays5Boolean = savedInstanceState.getBoolean("severalDays5Key");
+        boolean severalDays5Boolean = savedInstanceState.getBoolean(SEVERAL_DAYS_5);
         if (severalDays5Boolean) {
             severalDays5.setChecked(true);
         }
-        boolean moreThanHalf5Boolean = savedInstanceState.getBoolean("moreThanHalf5Key");
+        boolean moreThanHalf5Boolean = savedInstanceState.getBoolean(MORE_THAN_HALF_5);
         if (moreThanHalf5Boolean) {
             moreThanHalf5.setChecked(true);
         }
-        boolean nearlyEveryDay5Boolean = savedInstanceState.getBoolean("nearlyEveryDay5Key");
+        boolean nearlyEveryDay5Boolean = savedInstanceState.getBoolean(NEARLY_EVERY_DAY_5);
         if (nearlyEveryDay5Boolean) {
             nearlyEveryDay5.setChecked(true);
         }
-        boolean notAtAll6Boolean = savedInstanceState.getBoolean("notAtAll6Key");
+        boolean notAtAll6Boolean = savedInstanceState.getBoolean(NOT_AT_ALL_6);
         if (notAtAll6Boolean) {
             notAtAll6.setChecked(true);
         }
-        boolean severalDays6Boolean = savedInstanceState.getBoolean("severalDays6Key");
+        boolean severalDays6Boolean = savedInstanceState.getBoolean(SEVERAL_DAYS_6);
         if (severalDays6Boolean) {
             severalDays6.setChecked(true);
         }
-        boolean moreThanHalf6Boolean = savedInstanceState.getBoolean("moreThanHalf6Key");
+        boolean moreThanHalf6Boolean = savedInstanceState.getBoolean(MORE_THAN_HALF_6);
         if (moreThanHalf6Boolean) {
             moreThanHalf6.setChecked(true);
         }
-        boolean nearlyEveryDay6Boolean = savedInstanceState.getBoolean("nearlyEveryDay6Key");
+        boolean nearlyEveryDay6Boolean = savedInstanceState.getBoolean(NEARLY_EVERY_DAY_6);
         if (nearlyEveryDay6Boolean) {
             nearlyEveryDay6.setChecked(true);
         }
-        boolean notAtAll7Boolean = savedInstanceState.getBoolean("notAtAll7Key");
+        boolean notAtAll7Boolean = savedInstanceState.getBoolean(NOT_AT_ALL_7);
         if (notAtAll7Boolean) {
             notAtAll7.setChecked(true);
         }
-        boolean severalDays7Boolean = savedInstanceState.getBoolean("severalDays7Key");
+        boolean severalDays7Boolean = savedInstanceState.getBoolean(SEVERAL_DAYS_7);
         if (severalDays7Boolean) {
             severalDays7.setChecked(true);
         }
-        boolean moreThanHalf7Boolean = savedInstanceState.getBoolean("moreThanHalf7Key");
+        boolean moreThanHalf7Boolean = savedInstanceState.getBoolean(MORE_THAN_HALF_7);
         if (moreThanHalf7Boolean) {
             moreThanHalf7.setChecked(true);
         }
-        boolean nearlyEveryDay7Boolean = savedInstanceState.getBoolean("nearlyEveryDay7Key");
+        boolean nearlyEveryDay7Boolean = savedInstanceState.getBoolean(NEARLY_EVERY_DAY_7);
         if (nearlyEveryDay7Boolean) {
             nearlyEveryDay7.setChecked(true);
         }
-        boolean notDifficultBoolean = savedInstanceState.getBoolean("notDifficultKey");
+        boolean notDifficultBoolean = savedInstanceState.getBoolean(NOT_DIFFICULT);
         if (notDifficultBoolean) {
             notDifficult.setChecked(true);
         }
-        boolean somewhatDifficultBoolean = savedInstanceState.getBoolean("somewhatDifficultKey");
+        boolean somewhatDifficultBoolean = savedInstanceState.getBoolean(SOMEWHAT_DIFFICULT);
         if (somewhatDifficultBoolean) {
             somewhatDifficult.setChecked(true);
         }
-        boolean veryDifficultBoolean = savedInstanceState.getBoolean("veryDifficultKey");
+        boolean veryDifficultBoolean = savedInstanceState.getBoolean(VERY_DIFFICULT);
         if (veryDifficultBoolean) {
             veryDifficult.setChecked(true);
         }
-        boolean extremelyDifficultBoolean = savedInstanceState.getBoolean("extremelyDifficultKey");
+        boolean extremelyDifficultBoolean = savedInstanceState.getBoolean(EXTREMELY_DIFFICULT);
         if (extremelyDifficultBoolean) {
             extremelyDifficult.setChecked(true);
         }
@@ -910,7 +942,6 @@ public class MainActivity extends AppCompatActivity {
         if (severalDays7.isChecked()) {
             finalScore = finalScore + 1;
         }
-        //  Log.v(TAG, "here is the" + finalScore);
     }
 
     /*
@@ -968,6 +999,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
+    This method makes Question 8 of the GAD-7 disappear
+     */
+    private void difficultyQuestionDisappears() {
+        if (question8.getVisibility() == View.VISIBLE && answerGroup8.getVisibility() == View.VISIBLE) {
+            question8.setVisibility(View.GONE);
+            answerGroup8.setVisibility(View.GONE);
+        }
+    }
+
+    /*
+    This method makes Question 8 of the GAD-7 appear
+     */
+    private void difficultyQuestionAppears() {
+        if (question8.getVisibility() == View.GONE && answerGroup8.getVisibility() == View.GONE) {
+            question8.setVisibility(View.VISIBLE);
+            answerGroup8.setVisibility(View.VISIBLE);
+        }
+    }
+    /*
     This method creates the Results Summary, which includes the final score and what it indicates about the anxiety level of the user
      */
     private void displayResults(int finalScore) {
@@ -976,7 +1026,7 @@ public class MainActivity extends AppCompatActivity {
             resultsStatement = resultsStatement + "\n" + getString(R.string.belowThresholdString);
         } else if (finalScore > 4 && finalScore < 10) {
             resultsStatement = resultsStatement + "\n" + getString(R.string.mildAnxietyString);
-        } else if (finalScore > 9 && finalScore < 15) {
+        } else if (finalScore > 10 && finalScore < 15) {
             resultsStatement = resultsStatement + "\n" + getString(R.string.moderateAnxietyString);
         } else if (finalScore > 14 && finalScore < 22) {
             resultsStatement = resultsStatement + "\n" + getString(R.string.severeAnxietyString);
