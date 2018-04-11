@@ -78,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String EXTREMELY_DIFFICULT = "extremelyDifficultKey";
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -199,11 +198,11 @@ public class MainActivity extends AppCompatActivity {
 
     /*this method resets all radio buttons to unchecked
      * and resets the finalScore to 0
-    * and resets the resultsSummary
-    * and resets all checkboxes to unchecked
-    * and clears out the write-in answer
+     * and resets the resultsSummary
+     * and resets all checkboxes to unchecked
+     * and clears out the write-in answer
      * and makes difficulty question disappear
-    */
+     */
 
     public void resetMethod(View view) {
         answerGroup1.clearCheck();
@@ -793,19 +792,21 @@ public class MainActivity extends AppCompatActivity {
         if (nearlyEveryDay7.isChecked()) {
             resultsStatement = resultsStatement + "\n" + getString(R.string.nearlyEveryDayString);
         }
-        //adds results for question 8
-        resultsStatement = resultsStatement + "\n" + getString(R.string.question8String);
-        if (notDifficult.isChecked()) {
-            resultsStatement = resultsStatement + "\n" + getString(R.string.notDifficultString);
-        }
-        if (somewhatDifficult.isChecked()) {
-            resultsStatement = resultsStatement + "\n" + getString(R.string.somewhatDifficultString);
-        }
-        if (veryDifficult.isChecked()) {
-            resultsStatement = resultsStatement + "\n" + getString(R.string.veryDifficultString);
-        }
-        if (extremelyDifficult.isChecked()) {
-            resultsStatement = resultsStatement + "\n" + getString(R.string.extremelyDifficultString);
+        //adds results for question 8 if user answered the question
+        if (notDifficult.isChecked() || somewhatDifficult.isChecked() || veryDifficult.isChecked() || extremelyDifficult.isChecked()) {
+            resultsStatement = resultsStatement + "\n" + getString(R.string.question8String);
+            if (notDifficult.isChecked()) {
+                resultsStatement = resultsStatement + "\n" + getString(R.string.notDifficultString);
+            }
+            if (somewhatDifficult.isChecked()) {
+                resultsStatement = resultsStatement + "\n" + getString(R.string.somewhatDifficultString);
+            }
+            if (veryDifficult.isChecked()) {
+                resultsStatement = resultsStatement + "\n" + getString(R.string.veryDifficultString);
+            }
+            if (extremelyDifficult.isChecked()) {
+                resultsStatement = resultsStatement + "\n" + getString(R.string.extremelyDifficultString);
+            }
         }
         //adds checked Personal Wellness answers headline
         resultsStatement = resultsStatement + "\n" + getString(R.string.personalWellnessCheckedString);
@@ -1020,6 +1021,7 @@ public class MainActivity extends AppCompatActivity {
             answerGroup8.setVisibility(View.VISIBLE);
         }
     }
+
     /*
     This method creates the Results Summary, which includes the final score and what it indicates about the anxiety level of the user
      */
